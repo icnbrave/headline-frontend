@@ -8,7 +8,7 @@ export const getOneHeadline = headlinePk => {
   return Axios.get(contextPath + '/get?headlinePk=' + headlinePk).then(res => res.data)
 }
 export const splitHeadlinesAndReturn = data => {
-  return Axios.post(contextPath + '/split').then(res => res.data)
+  return Axios.get(contextPath + '/split?sep='+data.sep+'&ps='+data.ps).then(res => res.data)
 }
 export const constructHeadlinesAndReturn = data => {
   return Axios.post(contextPath + '/construct', data).then(res => res.data)

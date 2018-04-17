@@ -32,6 +32,8 @@
 </template>
 
 <script>
+import { HEADLINE_PAGETYP_IMPORT, HEADLINE_PAGETYP_SPLIT, HEADLINE_PAGETYP_CONST} from '@/assets/js/common'
+
 export default {
   data () {
     return {
@@ -49,20 +51,20 @@ export default {
           subs: [
             {
               icon: null,
-              index: '/headline/index',
-              title: '文案导入',
+              index: '/headline/'+HEADLINE_PAGETYP_IMPORT,
+              title: '文案导入与切割',
               subs: null
             },
             {
               icon: null,
-              index: '/headline/splitandlist',
-              title: '文案切割',
-              subs: null
-            },
-            {
-              icon: null,
-              index: '/headline/constructandlist',
+              index: '/headline/'+HEADLINE_PAGETYP_SPLIT,
               title: '文案生成',
+              subs: null
+            },
+            {
+              icon: null,
+              index: '/headline/'+HEADLINE_PAGETYP_CONST,
+              title: '文案列表',
               subs: null
             }
           ]

@@ -7,18 +7,8 @@ import HeadLineConstructAndList from '@/views/headline/components/HeadLineConstr
 // 定义路由路径数组列表
 export default[
   {
-    path: '/headline/index',
+    path: '/headline/:pagetyp',
     name: 'index',
     component: HeadlineList
-  },
-  {
-    path: '/headline/splitandlist',
-    name: 'splitandlist',
-    component: HeadLineSplitAndList
-  },
-  {
-    path: '/headline/constructandlist',
-    name: 'constructandlist',
-    component: HeadLineConstructAndList
   }
 ]
