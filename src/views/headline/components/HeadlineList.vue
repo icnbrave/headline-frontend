@@ -342,6 +342,11 @@ export default {
         .then(
           function(result) {
             this.splitedFirstPageHeadlines = result.data;
+            this.$message.success("文案切割完成");
+            // this.headlineSearch.flag = HEADLINE_FLAG_SPLITED
+            // this.headlineSearch.selectFlag = HEADLINE_SELECT_FLAG_INIT
+            // this.headlineSearch.seperator = this.splitSymbol
+            // this.loadData()
           }.bind(this)
         )
         .catch(function(error) {
@@ -414,6 +419,7 @@ export default {
         .then(
           function(result) {
             this.constructedHeadlines = result.data;
+            this.$message.success("文案构造成功");
             this.loadData();
           }.bind(this)
         )
@@ -436,6 +442,7 @@ export default {
       this.headlineSearch.deleteFlag = HEADLINE_DELETE_FLAG_FALSE;
       if (newTyp == HEADLINE_PAGETYP_IMPORT) {
         this.headlineSearch.flag = HEADLINE_FLAG_INIT;
+        this.headlineSearch.seperator = undefined
         this.loadData();
       }
       if (newTyp == HEADLINE_PAGETYP_SPLIT) {
@@ -445,6 +452,7 @@ export default {
       }
       if (newTyp == HEADLINE_PAGETYP_CONST) {
         this.headlineSearch.flag = HEADLINE_FLAG_CONSTRUCTED;
+        this.headlineSearch.seperator = undefined
         this.loadData();
       }
     }
